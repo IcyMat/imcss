@@ -1,7 +1,7 @@
 # example Apache .htaccess file to add access control header
  
-<filesMatch ".(ttf|otf)$">
-<ifModule mod_headers.c>
-Header set Access-Control-Allow-Origin "*"
-</ifModule>
-</filesMatch>
+<FilesMatch "\.(ttf|ttc|otf|eot|woff)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
