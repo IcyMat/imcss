@@ -466,9 +466,8 @@ body {
 /* ---------------------- ICONS ---------------------- */
 @font-face {
   font-family: 'ImIcon';
-  src: url('http://img.icymat.pl/imcss/imicons.otf');
-  src: local("☺"),
-    url('http://img.icymat.pl/imcss/imicons.ttf') format('ttf');
+  src: local('imicons'),
+    url('imicons.otf') format('otf'), url('imicons.ttf') format('ttf');
 }
 
 .icon {
