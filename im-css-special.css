@@ -467,7 +467,7 @@ body {
 @font-face {
   font-family: 'ImIcon';
   src: local('imicons'),
-    url('/downloader.php?type=ttf') format('ttf');
+    url('__PATH__downloader.php?type=ttf') format('ttf');
 }
 
 .icon {
