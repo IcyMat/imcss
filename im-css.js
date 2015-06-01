@@ -18,6 +18,8 @@ $(function(){
 		 } else {
 			 $(this).find('.select .text').html(first);
 		 }
+
+		 $(this).find('.elem').width($(this).find('select').width());
 	 });
 	 $('.select-field-parent .list div').click(function(){
 		 var parent = $(this).parent().parent().parent();
@@ -72,6 +74,8 @@ $(function(){
 			 }
 			 $(list).append('<div name="' + $(el).attr('value') + '" class="' + selected + '">' + $(el).html() + '</div>');
 		 });
+
+		 $(this).find('.elem').width($(this).find('select').width());
 	 });
 	 $('.multiple-field-parent .select').click(function() {
 		 var icon = $(this).find('.icon');
@@ -115,5 +119,64 @@ $(function(){
 	 $('.multiple-field-parent').mouseleave(function(){
 		 $('.multiple-field-parent .list').css('display', 'none');
 	 });
+	
 	 
+	 /* Checkbox */
+	 $('.checkbox').wrap('<div class="checkbox-container">');
+	 $('.checkbox-container').append('<div class="switcher">&nbsp;</div>');
+	 $('.checkbox-container .switcher').append('<div class="button">&nbsp;<div class="bg">&nbsp;</div></div>').click(function(){
+		 var button = $(this).find('.button');
+		 var checkbox = $(this).parent().find('input[type=checkbox]');
+		 var switcher = this;
+		 if($(button).hasClass('on')) {
+			 $(button).removeClass('on').animate({
+				 marginLeft: '-=32px'
+			 }, 300, function(){
+				 $(switcher).removeClass('on');
+			 });
+			 $(checkbox).prop('checked', false);
+		 } else {
+			 $(button).addClass('on').animate({
+				 marginLeft: '+=32px'
+			 }, 300, function(){
+				 $(switcher).addClass('on');
+			 });
+			 $(checkbox).prop('checked', true);
+		 }
+	 });
+	 $('.checkbox-container input').on('change', function(){
+		 var button = $(this).parent().find('.button');
+		 var checkbox = $(this).parent().find('input[type=checkbox]');
+		 var switcher = $(this).parent().find('.switcher');
+		 if($(button).hasClass('on')) {
+			 /*$(button).removeClass('on').animate({
+				 marginLeft: '-=32px'
+			 }, 300, function(){
+				 $(switcher).removeClass('on');
+			 });*/
+			 $(checkbox).prop('checked', false);
+		 } else {
+			 /*$(button).addClass('on').animate({
+				 marginLeft: '+=32px'
+			 }, 300, function(){
+				 $(switcher).addClass('on');
+			 });*/
+			 $(checkbox).prop('checked', true);
+		 }
+	 });
+	 $('.checkbox-container').each(function(){
+		 var button = $(this).find('.button');
+		 var checkbox = $(this).find('input[type=checkbox]');
+		 var switcher = $(this).find('.switcher');
+		 if($(checkbox).prop('checked')) {
+			 $(button).addClass('on').animate({
+				 marginLeft: '+=32px'
+			 }, 300, function(){
+				 $(switcher).addClass('on');
+			 });
+		 } else {
+			 $(button).removeClass('on');
+			 $(switcher).removeClass('on');
+		 }
+	 });
 });

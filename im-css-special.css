@@ -345,9 +345,60 @@ body {
 	border: 1px solid #999;
 	background: #ddd;
 	white-space: nowrap;
-	margin: -3px 5px 5px 0;
-	padding: 2px 5px;
+	margin: -3px 5px 6px 0;
+	padding: 2px 5px 4px 5px;
 	float: left;
+}
+
+/* ---------------------- CHECKBOX ---------------------- */
+.checkbox-container {
+	width: 70px;
+	display: inline-block;
+}
+
+.checkbox-container input {
+	display: none;
+}
+
+.checkbox-container .switcher {
+	width: 70px;
+	height: 25px;
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	background: #ddd;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.checkbox-container .switcher.on {
+	/*background: #337aff;*/
+}
+
+.checkbox-container .switcher .button {
+	width: 70px;
+	min-height: 23px;
+	border-radius: 3px;
+	border: 0;
+	background: #4cc324;
+	margin-top: -16px;
+	margin-left: -33px; 
+}
+
+.checkbox-container .switcher .button .bg {
+	width: 37px;
+	height: 23px;
+	border-radius: 3px;
+	border: 1px solid #bbb;
+	background: #bbb;
+	float: right;
+}
+
+/* ---------------------- LABELS ---------------------- */
+.label {
+	min-height: 25px;
+	padding: 5px;
 }
 
 /* ---------------------- BUTTONS ---------------------- */
@@ -402,6 +453,18 @@ body {
 .btn.btn-primary:hover {
 	border: 1px solid #1d1d79;
 	background: #1d1d79;
+	color: #fff;
+}
+
+.btn.btn-important {
+	border: 1px solid #46ab21;
+	background: #4cc324;
+	color: #fff;
+}
+
+.btn.btn-important:hover {
+	border: 1px solid #646d88;
+	background: #54d828;
 	color: #fff;
 }
 
@@ -461,6 +524,7 @@ body {
 .table td {
 	border-bottom: 1px dashed #ddd;
 	padding: 7px 4px;
+	vertical-align: middle;
 }
 
 /* ---------------------- ICONS ---------------------- */

@@ -232,6 +232,10 @@ body {
 	padding: 0;
 }
 
+#menu select {
+	width: 50px;
+}
+
 #page h1 {
 	color: #333;
 	font-family: 'Arial', sans-serif;
