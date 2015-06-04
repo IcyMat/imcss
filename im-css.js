@@ -148,7 +148,7 @@ $(function(){
 		 var button = $(this).parent().find('.button');
 		 var checkbox = $(this).parent().find('input[type=checkbox]');
 		 var switcher = $(this).parent().find('.switcher');
-		 if($(button).hasClass('on')) {
+		 if($(checkbox).prop('checked')) {
 			 /*$(button).removeClass('on').animate({
 				 marginLeft: '-=32px'
 			 }, 300, function(){

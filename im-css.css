@@ -34,6 +34,38 @@ table {
   /*border-spacing:0;*/
 }
 
+/* ---------------------- ANIMACJE ---------------------- */
+@-webkit-keyframes cssAnimation {
+	from {
+		-webkit-transform: rotate(0deg);
+		/*opacity: 1;*/
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		/*opacity: 0;*/
+	}
+}
+@-moz-keyframes cssAnimation {
+	from {
+		-moz-transform: rotate(0deg);
+		/*opacity: 1;*/
+	}
+	to {
+		-moz-transform: rotate(360deg);
+		/*opacity: 0;*/
+	}
+}
+@-o-keyframes cssAnimation {
+	from {
+		-o-transform: rotate(0deg);
+		/*opacity: 1;*/
+	}
+	to {
+		-o-transform: rotate(360deg);
+		/*opacity: 0;*/
+	}
+}
+
 /* ---------------------- OGÓLNE ---------------------- */
 * {
 	box-sizing: border-box;
@@ -321,6 +353,7 @@ body {
 	position: absolute;
 	display: none;
 	overflow: auto;
+	z-index: 100;
 }
 
 .select-field-parent .list div, .multiple-field-parent .list div {
@@ -352,6 +385,57 @@ body {
 	margin: -3px 5px 5px 0;
 	padding: 2px 5px;
 	float: left;
+}
+
+/* ---------------------- CHECKBOX ---------------------- */
+.checkbox-container {
+	width: 70px;
+	display: inline-block;
+}
+
+.checkbox-container input {
+	display: none;
+}
+
+.checkbox-container .switcher {
+	width: 70px;
+	height: 25px;
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+	background: #ddd;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.checkbox-container .switcher.on {
+	/*background: #337aff;*/
+}
+
+.checkbox-container .switcher .button {
+	width: 70px;
+	min-height: 23px;
+	border-radius: 3px;
+	border: 0;
+	background: #4cc324;
+	margin-top: -16px;
+	margin-left: -33px; 
+}
+
+.checkbox-container .switcher .button .bg {
+	width: 37px;
+	height: 23px;
+	border-radius: 3px;
+	border: 1px solid #bbb;
+	background: #bbb;
+	float: right;
+}
+
+/* ---------------------- LABELS ---------------------- */
+.label {
+	min-height: 25px;
+	padding: 5px;
 }
 
 /* ---------------------- BUTTONS ---------------------- */
@@ -409,6 +493,18 @@ body {
 	color: #fff;
 }
 
+.btn.btn-important {
+	border: 1px solid #46ab21;
+	background: #4cc324;
+	color: #fff;
+}
+
+.btn.btn-important:hover {
+	border: 1px solid #646d88;
+	background: #54d828;
+	color: #fff;
+}
+
 .btn.btn-cancel {
 	border: 1px solid #222;
 	background: #222;
@@ -440,7 +536,6 @@ body {
 	text-decoration: underline !important;
 }
 
-
 /* ---------------------- TABLES ---------------------- */
 .table, .table td {
 	/*border-collapse: collapse;*/
@@ -465,13 +560,13 @@ body {
 .table td {
 	border-bottom: 1px dashed #ddd;
 	padding: 7px 4px;
+	vertical-align: middle;
 }
 
 /* ---------------------- ICONS ---------------------- */
 @font-face {
   font-family: 'ImIcon';
-  src: local('imicons'),
-    url('imicons.otf') format('otf'), url('imicons.ttf') format('ttf');
+  src: url('imicons.ttf');
 }
 
 .icon {
@@ -502,6 +597,15 @@ body {
 .icon-facebook:before { content: "\F016"; }
 .icon-facebook-text:before { content: "\F017"; }
 .icon-github:before { content: "\F018"; }
+.icon-preloader-square:before, .icon-squares:before { content: "\F019"; }
+.icon-preloader:before, .icon-circles:before { content: "\F020"; }
+.icon-qendra-logo:before { content: "\F021"; }
+
+.icon-preloader-square, .icon-preloader {
+		-webkit-animation: cssAnimation 3s infinite linear;
+		-moz-animation: cssAnimation 3s infinite linear;
+		-o-animation: cssAnimation 3s infinite linear;
+}
 
 /* ---------------------- CONTAINER ---------------------- */
 @media all and (max-width: 768px) {
