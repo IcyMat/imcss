@@ -436,6 +436,7 @@ body {
 .label {
 	border-radius: 7px;
 	font-size: 12pt;
+	padding: 5px;
 }
 
 .label-error {
