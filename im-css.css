@@ -434,8 +434,26 @@ body {
 
 /* ---------------------- LABELS ---------------------- */
 .label {
-	min-height: 25px;
-	padding: 5px;
+	border-radius: 7px;
+	font-size: 12pt;
+}
+
+.label-error {
+	border: 1px solid #d00;
+	background: #e77;
+	color: #922;
+}
+
+.label-success {
+	border: 1px solid #0d0;
+	background: #7e7;
+	color: #292;
+}
+
+.label-warning {
+	border: 1px solid #ff0;
+	background: #eea;
+	color: #883;
 }
 
 /* ---------------------- BUTTONS ---------------------- */
