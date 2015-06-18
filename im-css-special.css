@@ -344,7 +344,7 @@ body {
 }
 
 /* ---------------------- FORM FIELDS ---------------------- */
-.text-field {
+.text-field, .file-field {
 	border: 1px solid #aaa;
 	border-radius: 5px;
 	font-size: 12pt;
@@ -485,6 +485,7 @@ body {
 .btn {
 	border-radius: 5px;
 	text-decoration: none !important;
+	white-space: nowrap;
 	cursor: pointer;
 }
 
